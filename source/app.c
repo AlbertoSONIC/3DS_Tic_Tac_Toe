@@ -47,7 +47,11 @@ void variableReset()
 void app()
 {
 	//RESET POPUP
-	if (input & KEY_UP) resetPopup = true;
+	if (input & KEY_UP)
+	{
+		if (winner == 0) resetPopup = 1;
+		else variableReset();
+	}
 	//If you tap yes then it resets 
 	if ((((posX >= 50 && posX <= 141) && (posY >= 151 && posY <= 179)) || input & KEY_A) && resetPopup == true)
 	{
@@ -173,16 +177,16 @@ bool checkGameState()
 		(game[0][0] == 1 && game[0][1] == 1 && game[0][2] == 1) ||
 		(game[0][0] == 1 && game[1][0] == 1 && game[2][0] == 1) ||
 		(game[2][0] == 1 && game[2][1] == 1 && game[2][2] == 1) ||
-		(game[2][2] == 1 && game[1][2] == 1 && game[1][2] == 1) ||
-		(game[0][1] == 1 && game[1][1] == 1 && game[1][2] == 1) ||
+		(game[2][2] == 1 && game[1][2] == 1 && game[0][2] == 1) ||
+		(game[1][0] == 1 && game[1][1] == 1 && game[1][2] == 1) ||
 		(game[0][1] == 1 && game[1][1] == 1 && game[2][1] == 1) ||
 		(game[0][0] == 2 && game[1][1] == 2 && game[2][2] == 2) ||
 		(game[2][0] == 2 && game[1][1] == 2 && game[0][2] == 2) ||
 		(game[0][0] == 2 && game[0][1] == 2 && game[0][2] == 2) ||
 		(game[0][0] == 2 && game[1][0] == 2 && game[2][0] == 2) ||
 		(game[2][0] == 2 && game[2][1] == 2 && game[2][2] == 2) ||
-		(game[2][2] == 2 && game[1][2] == 2 && game[1][2] == 2) ||
-		(game[0][1] == 2 && game[1][1] == 2 && game[1][2] == 2) ||
+		(game[2][2] == 2 && game[1][2] == 2 && game[0][2] == 2) ||
+		(game[1][0] == 2 && game[1][1] == 2 && game[1][2] == 2) ||
 		(game[0][1] == 2 && game[1][1] == 2 && game[2][1] == 2)) end = true;
 
 	return end;

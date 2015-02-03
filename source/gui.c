@@ -76,15 +76,15 @@ void guiBottom(int game[3][3], int winner)
 	//IF THERE'S A WINNER - The winner number is inverted: 1 is red, 2 is blue
 	if (winner == 1)
 	{
-		drawFillRect(50, 50, 270, 190, 255, 128, 0, screenBottom);
-		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "RED wins!", 127, 240 - fontDefault.height * 7);
-		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "Press UP to reset!", 110, 240 - fontDefault.height * 8);
+		drawFillRect(100, 90, 210, 150, 255, 0, 0, screenBottom);
+		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "RED wins!", 130, 230 - fontDefault.height * 7);
+		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "Press UP to reset!", 110, 230 - fontDefault.height * 8);
 	}
 	else if (winner == 2)
 	{
-		drawFillRect(50, 50, 270, 190, 255, 128, 0, screenBottom);
-		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "BLUE wins!", 127, 240 - fontDefault.height * 7);
-		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "Press UP to reset!", 110, 240 - fontDefault.height * 8);
+		drawFillRect(100, 90, 210, 150, 0, 0, 255, screenBottom);
+		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "BLUE wins!", 130, 230 - fontDefault.height * 7);
+		gfxDrawText(GFX_BOTTOM, GFX_LEFT, NULL, "Press UP to reset!", 110, 230 - fontDefault.height * 8);
 	}
 }
 
