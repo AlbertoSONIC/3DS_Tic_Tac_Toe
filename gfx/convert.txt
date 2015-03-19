@@ -1,1 +1,1 @@
-convert -rotate 90 blueround.bmp blueround.bgr
+convert -rotate 90 logo.bmp logo.bgr
